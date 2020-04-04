@@ -1,26 +1,38 @@
 PODS:
   - Alamofire (4.9.1)
+  - HandyJSON (5.0.1)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
+  - ObjectMapper (3.5.2)
+  - PocketSVG (2.5.0)
   - Result (4.1.0)
 
 DEPENDENCIES:
+  - HandyJSON
   - Moya
+  - ObjectMapper
+  - PocketSVG
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - HandyJSON
     - Moya
+    - ObjectMapper
+    - PocketSVG
     - Result
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  PocketSVG: 9d9c4bc8e7d8dbbc208bd21e5c92814fd3c6c34d
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: 5dfc8935930a114290eae3d63265a455b425d1e8
+PODFILE CHECKSUM: 9e1757bed0e8827b063fc8c7cb93628fdd1d2520
 
 COCOAPODS: 1.8.4

@@ -5,6 +5,9 @@ target 'Countries' do
   use_frameworks!
 
   pod 'Moya'
+  pod 'HandyJSON'
+  pod 'ObjectMapper'
+  pod 'PocketSVG'
 end
   target 'CountriesTests' do
     inherit! :search_paths

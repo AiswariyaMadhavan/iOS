@@ -8,18 +8,35 @@
 
 import Foundation
 import Moya
-struct CountryTarget: TargetType {
-    var baseURL: URL
+enum CountryTarget {
+    case getListForRegion(region: String)
+}
+extension CountryTarget: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://restcountries.eu/rest/")!
+    }
 
-    var path: String
+    var path: String {
+        switch self {
+        case .getListForRegion(let regionCode):
+            return "v2/name/" + regionCode
+        }
+    }
 
-    var method: Moya.Method 
+    var method: Moya.Method {
+        return .get
+    }
 
-    var sampleData: Data
+    var sampleData: Data {
+        Data()
+    }
 
-    var task: Task
+    var task: Task {
+        return .requestPlain
+    }
 
-    var headers: [String : String]?
+    var headers: [String : String]? {
+        return nil
+    }
 
-    
 }
