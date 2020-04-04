@@ -1,0 +1,16 @@
+//
+//  ViewControllerViewModel.swift
+//  Countries
+//
+//  Created by Iswariya Madhavan on 04/04/20.
+//  Copyright © 2020 Iswariya Madhavan. All rights reserved.
+//
+
+import Foundation
+
+class SearchViewModel {
+
+    func getSearchResult(_ searchTerm: String?) {
+        print("search term \(searchTerm)")
+    }
+}

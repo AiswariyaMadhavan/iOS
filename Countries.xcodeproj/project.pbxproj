@@ -15,6 +15,7 @@
 		D472950124382B960068EB75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D472950024382B960068EB75 /* Assets.xcassets */; };
 		D472950424382B960068EB75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D472950224382B960068EB75 /* LaunchScreen.storyboard */; };
 		D472950F24382B960068EB75 /* CountriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472950E24382B960068EB75 /* CountriesTests.swift */; };
+		D472951C243835000068EB75 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472951B243835000068EB75 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D472950A24382B960068EB75 /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D472950E24382B960068EB75 /* CountriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTests.swift; sourceTree = "<group>"; };
 		D472951024382B960068EB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D472951B243835000068EB75 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				D47294F424382B940068EB75 /* AppDelegate.swift */,
 				D47294F624382B940068EB75 /* SceneDelegate.swift */,
 				D47294F824382B940068EB75 /* ViewController.swift */,
+				D472951B243835000068EB75 /* SearchViewModel.swift */,
 				D47294FA24382B940068EB75 /* Main.storyboard */,
 				D472950024382B960068EB75 /* Assets.xcassets */,
 				D472950224382B960068EB75 /* LaunchScreen.storyboard */,
@@ -205,6 +208,7 @@
 			files = (
 				D47294F924382B940068EB75 /* ViewController.swift in Sources */,
 				D47294F524382B940068EB75 /* AppDelegate.swift in Sources */,
+				D472951C243835000068EB75 /* SearchViewModel.swift in Sources */,
 				D47294FF24382B940068EB75 /* Countries.xcdatamodeld in Sources */,
 				D47294F724382B940068EB75 /* SceneDelegate.swift in Sources */,
 			);
