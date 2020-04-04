@@ -37,7 +37,6 @@ extension ViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.scopeButtonTitles = ["Search Country"]
-        searchController.searchBar.delegate = self
     }
 }
 extension ViewController: UITableViewDataSource {
@@ -59,9 +58,3 @@ extension ViewController: UISearchResultsUpdating {
   }
 }
 
-extension ViewController: UISearchBarDelegate {
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        viewModel.getSearchResult(searchText)
-    }
-}
