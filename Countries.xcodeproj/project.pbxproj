@@ -127,6 +127,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D42C2E1D243E147300CE4842 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D472951B243835000068EB75 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D42C2E1E243E148900CE4842 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D47294F824382B940068EB75 /* ViewController.swift */,
+				D472953B2438E6930068EB75 /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D42C2E1F243E14B000CE4842 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				D47295392438D7030068EB75 /* SearchCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		D47294E824382B940068EB75 = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +177,15 @@
 			children = (
 				D47294F424382B940068EB75 /* AppDelegate.swift */,
 				D47294F624382B940068EB75 /* SceneDelegate.swift */,
-				D47294F824382B940068EB75 /* ViewController.swift */,
-				D472953B2438E6930068EB75 /* DetailsViewController.swift */,
-				D472951B243835000068EB75 /* SearchViewModel.swift */,
+				D42C2E1E243E148900CE4842 /* ViewControllers */,
+				D42C2E1F243E14B000CE4842 /* CustomCell */,
+				D42C2E1D243E147300CE4842 /* ViewModel */,
 				D47295342438497F0068EB75 /* NetworkLayer */,
 				D47294FA24382B940068EB75 /* Main.storyboard */,
 				D472950024382B960068EB75 /* Assets.xcassets */,
 				D472950224382B960068EB75 /* LaunchScreen.storyboard */,
 				D472950524382B960068EB75 /* Info.plist */,
 				D47294FD24382B940068EB75 /* Countries.xcdatamodeld */,
-				D47295392438D7030068EB75 /* SearchCell.swift */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -179,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				D472951D243842500068EB75 /* CountryAPIService.swift */,
-				D472951F243842740068EB75 /* CountryTarget.swift */,
 				D472953524387B8C0068EB75 /* APIResponseModel.swift */,
+				D472951F243842740068EB75 /* CountryTarget.swift */,
 				D472953724388DDC0068EB75 /* CountryMoyaProvider.swift */,
 			);
 			path = NetworkLayer;

@@ -16,15 +16,16 @@ class CountryAPIService {
                                 switch response {
                                 case .success(let response):
                                   do {
-                                    let dictResult = try JSONSerialization.jsonObject(with: response.data, options: []) as? NSArray
-                                    var apiResponse = [APIResponseModel]()
-                                    for data in dictResult! {
-                                        if let convertedData = data as? NSDictionary {
-                                            let result = APIResponseModel.deserialize(from: convertedData)
-                                            apiResponse.append(result!)
+                                    if let dictResult = try JSONSerialization.jsonObject(with: response.data, options: []) as? NSArray {
+                                        var apiResponse = [APIResponseModel]()
+                                        for data in dictResult {
+                                            if let convertedData = data as? NSDictionary {
+                                                let result = APIResponseModel.deserialize(from: convertedData)
+                                                apiResponse.append(result!)
+                                            }
                                         }
+                                        callback(apiResponse)
                                     }
-                                    callback(apiResponse)
                                   } catch {
                                   }
                                 case .failure:

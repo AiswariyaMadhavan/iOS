@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import PocketSVG
 
 protocol viewModelDelagte: class {
     func updateSearchData(response: [APIResponseModel])
@@ -25,13 +24,13 @@ class SearchViewModel: NSObject {
         }
     }
 
-    func loadImage(flagURL: String) -> SVGImageView?  {
-         return SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
-
-//        let svgImageView = SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
-//        svgImageView.frame = view.bounds
-//        svgImageView.contentMode = .scaleAspectFit
-//        view.addSubview(svgImageView)
-    }
-
+//    func loadImage(flagURL: String) {
+//         return SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
+//
+////        let svgImageView = SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
+////        svgImageView.frame = view.bounds
+////        svgImageView.contentMode = .scaleAspectFit
+////        view.addSubview(svgImageView)
+//    }
+//
 }

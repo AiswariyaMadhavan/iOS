@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
   - HandyJSON (5.0.1)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
@@ -7,32 +10,35 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - ObjectMapper (3.5.2)
-  - PocketSVG (2.5.0)
   - Result (4.1.0)
+  - SVGKit (2.1.1):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
   - HandyJSON
   - Moya
   - ObjectMapper
-  - PocketSVG
+  - SVGKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CocoaLumberjack
     - HandyJSON
     - Moya
     - ObjectMapper
-    - PocketSVG
     - Result
+    - SVGKit
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
-  PocketSVG: 9d9c4bc8e7d8dbbc208bd21e5c92814fd3c6c34d
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SVGKit: 652cdf7bef8bec8564d04a8511d3ab50c7595fac
 
-PODFILE CHECKSUM: 9e1757bed0e8827b063fc8c7cb93628fdd1d2520
+PODFILE CHECKSUM: 5cb8ba18ffef6be66f1f2a4da6d21b1ca00c6435
 
 COCOAPODS: 1.8.4

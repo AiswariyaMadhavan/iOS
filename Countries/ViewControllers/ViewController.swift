@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
   @IBOutlet weak var searchResultstblView: UITableView!
   @IBOutlet weak var searchBar: UISearchBar!
-  
   let viewModel = SearchViewModel()
   let searchController = UISearchController(searchResultsController: nil)
     var searchResult: [APIResponseModel]?
@@ -42,29 +41,36 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     return searchResult?.count ?? 0
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchCell
     if let data = searchResult?[indexPath.row] {
         cell?.name.text = data.name
         var imageResponse: Data?
-        do {
-            imageResponse = try Data.init(contentsOf: URL.init(string: data.flag!)!)
+        if let imageURL = data.flag {
+            cell?.setDataForCell(URL.init(string: imageURL)!)
         }
-        catch {}
+//        do {
+//            imageResponse = try Data.init(contentsOf: URL.init(string: data.flag!)!)
+//        }
+//        catch {}
 
-            DispatchQueue.main.async {
-                if let imageValue = UIImage(data: imageResponse!) {
-                    cell?.countryFlag?.image = imageValue
-                }
-                else {
-                    if (indexPath.row % 2 == 0 ) {
-                        cell?.countryFlag.backgroundColor = UIColor.red
-                    }
-                    else {
-                        cell?.countryFlag.backgroundColor = UIColor.green
-                    }
-                }
-            }
+//            DispatchQueue.main.async {
+//                if let imageValue = UIImage(data: imageResponse!) {
+//                    cell?.countryFlag?
+//
+//                }
+//                else {
+//                    if (indexPath.row % 2 == 0 ) {
+//                        cell?.countryFlag.backgroundColor = UIColor.red
+//                    }
+//                    else {
+//                        cell?.countryFlag.backgroundColor = UIColor.green
+//                    }
+//                }
+//            }
     }
     return cell!
   }

@@ -7,7 +7,7 @@ target 'Countries' do
   pod 'Moya'
   pod 'HandyJSON'
   pod 'ObjectMapper'
-  pod 'PocketSVG'
+  pod 'SVGKit'
 end
   target 'CountriesTests' do
     inherit! :search_paths
