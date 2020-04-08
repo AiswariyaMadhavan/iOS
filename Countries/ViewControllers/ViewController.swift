@@ -48,29 +48,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchCell
     if let data = searchResult?[indexPath.row] {
         cell?.name.text = data.name
-        var imageResponse: Data?
         if let imageURL = data.flag {
             cell?.setDataForCell(URL.init(string: imageURL)!)
         }
-//        do {
-//            imageResponse = try Data.init(contentsOf: URL.init(string: data.flag!)!)
-//        }
-//        catch {}
-
-//            DispatchQueue.main.async {
-//                if let imageValue = UIImage(data: imageResponse!) {
-//                    cell?.countryFlag?
-//
-//                }
-//                else {
-//                    if (indexPath.row % 2 == 0 ) {
-//                        cell?.countryFlag.backgroundColor = UIColor.red
-//                    }
-//                    else {
-//                        cell?.countryFlag.backgroundColor = UIColor.green
-//                    }
-//                }
-//            }
     }
     return cell!
   }
@@ -84,7 +64,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 extension ViewController: viewModelDelagte {
     func updateSearchData(response: [APIResponseModel]) {
         searchResult = response
-        searchResultstblView.reloadData()
+        DispatchQueue.main.async {
+            self.searchResultstblView.reloadData()
+        }
     }
 }
 extension ViewController: UISearchBarDelegate {

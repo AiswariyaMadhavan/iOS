@@ -24,13 +24,4 @@ class SearchViewModel: NSObject {
         }
     }
 
-//    func loadImage(flagURL: String) {
-//         return SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
-//
-////        let svgImageView = SVGImageView.init(contentsOf: URL.init(string: flagURL)!)
-////        svgImageView.frame = view.bounds
-////        svgImageView.contentMode = .scaleAspectFit
-////        view.addSubview(svgImageView)
-//    }
-//
 }
